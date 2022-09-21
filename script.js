@@ -67,7 +67,6 @@ const m = parseInt(date.substr(5, 2));
 const d = parseInt(date.substr(8, 2));
 
 const time = date.substr(11);
-console.log(`${dayOfTheWeek(d, m, y)}`)
 
 dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${d}.${m}.${y}`
 timeOutput.innerHTML = time;
@@ -77,8 +76,8 @@ nameOutput.innerHTML = data.location.name;
 const iconID = data.current.condition.icon.substring(data.current.condition.icon.length-7)
 
 icon.src = "./icons/day/" + iconID;
-
-cloudOutput.innerHtml = data.current.cloud + "%"
+// console.log(data.current.cloud + "%")
+cloudOutput.innerHTML = data.current.cloud + "%"
 humidityOutput.innerHTML = data.current.humidity + "%"
 windOutput.innerHTML = data.current.wind_kph + "km/h"
 
